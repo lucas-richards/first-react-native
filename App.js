@@ -1,7 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, ScrollView, Image, Text, TextInput, View } from 'react-native';
+import { StyleSheet, ScrollView, Image, Text, TextInput, View, FlatList } from 'react-native';
 import React, {useState} from 'react';
-import Cat from './components/cat';
+import Cat from './components/Cat';
+import FlatListBasics from './components/FlatListBasics'; 
 
 export default function App() {
   const [text, setText] = useState('');
@@ -34,40 +35,8 @@ export default function App() {
       </Text>
       <Cat name="Munkustrap" />
       <Cat name="Spot" />
-      <ScrollView>
-        <Text style={{fontSize: 96}}>Scroll me plz</Text>
-        <Image source={logo} />
-        <Image source={logo} />
-        <Image source={logo} />
-        <Image source={logo} />
-        <Image source={logo} />
-        <Text style={{fontSize: 96}}>If you like</Text>
-        <Image source={logo} />
-        <Image source={logo} />
-        <Image source={logo} />
-        <Image source={logo} />
-        <Image source={logo} />
-        <Text style={{fontSize: 96}}>Scrolling down</Text>
-        <Image source={logo} />
-        <Image source={logo} />
-        <Image source={logo} />
-        <Image source={logo} />
-        <Image source={logo} />
-        <Text style={{fontSize: 96}}>What's the best</Text>
-        <Image source={logo} />
-        <Image source={logo} />
-        <Image source={logo} />
-        <Image source={logo} />
-        <Image source={logo} />
-        <Text style={{fontSize: 96}}>Framework around?</Text>
-        <Image source={logo} />
-        <Image source={logo} />
-        <Image source={logo} />
-        <Image source={logo} />
-        <Image source={logo} />
-        <Text style={{fontSize: 80}}>React Native</Text>
-      </ScrollView>
-
+      <FlatListBasics />
+      
       <StatusBar style="auto" />
     </View>
   );
