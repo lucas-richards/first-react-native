@@ -1,5 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Image, Text, TextInput, View } from 'react-native';
+import React from 'react';
+import Cat from './components/cat';
 
 export default function App() {
   return (
@@ -20,6 +22,8 @@ export default function App() {
         }}
         defaultValue="You can type in me"
       />
+      <Cat name="Munkustrap" />
+      <Cat name="Spot" />
 
       <StatusBar style="auto" />
     </View>
