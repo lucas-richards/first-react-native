@@ -1,9 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Image, Text, TextInput, View } from 'react-native';
-import React from 'react';
+import { StyleSheet, ScrollView, Image, Text, TextInput, View } from 'react-native';
+import React, {useState} from 'react';
 import Cat from './components/cat';
 
 export default function App() {
+  const [text, setText] = useState('');
+  const logo = {
+  uri: 'https://reactnative.dev/img/tiny_logo.png',
+  width: 64,
+  height: 64,
+};
   return (
     <View style={styles.container}>
       <Image
@@ -15,15 +21,52 @@ export default function App() {
       <Text style={styles.title}>First React Native App! Wooooow!</Text>
       <Text>First React Native App! Wooooow!</Text>
       <TextInput
-        style={{
-          height: 40,
-          borderColor: 'gray',
-          borderWidth: 1,
-        }}
-        defaultValue="You can type in me"
+        style={{height: 40}}
+        placeholder="Type here to translate!"
+        onChangeText={newText => setText(newText)}
+        defaultValue={text}
       />
+      <Text style={{padding: 10, fontSize: 42}}>
+        {text
+          .split(' ')
+          .map(word => word && '🍕')
+          .join(' ')}
+      </Text>
       <Cat name="Munkustrap" />
       <Cat name="Spot" />
+      <ScrollView>
+        <Text style={{fontSize: 96}}>Scroll me plz</Text>
+        <Image source={logo} />
+        <Image source={logo} />
+        <Image source={logo} />
+        <Image source={logo} />
+        <Image source={logo} />
+        <Text style={{fontSize: 96}}>If you like</Text>
+        <Image source={logo} />
+        <Image source={logo} />
+        <Image source={logo} />
+        <Image source={logo} />
+        <Image source={logo} />
+        <Text style={{fontSize: 96}}>Scrolling down</Text>
+        <Image source={logo} />
+        <Image source={logo} />
+        <Image source={logo} />
+        <Image source={logo} />
+        <Image source={logo} />
+        <Text style={{fontSize: 96}}>What's the best</Text>
+        <Image source={logo} />
+        <Image source={logo} />
+        <Image source={logo} />
+        <Image source={logo} />
+        <Image source={logo} />
+        <Text style={{fontSize: 96}}>Framework around?</Text>
+        <Image source={logo} />
+        <Image source={logo} />
+        <Image source={logo} />
+        <Image source={logo} />
+        <Image source={logo} />
+        <Text style={{fontSize: 80}}>React Native</Text>
+      </ScrollView>
 
       <StatusBar style="auto" />
     </View>
