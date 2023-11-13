@@ -3,6 +3,7 @@ import { StyleSheet, ScrollView, Image, Text, TextInput, View, FlatList } from '
 import React, {useState} from 'react';
 import Cat from './components/Cat';
 import FlatListBasics from './components/FlatListBasics'; 
+import SectionListBasics from './components/SectionListBasics';
 
 export default function App() {
   const [text, setText] = useState('');
@@ -36,6 +37,7 @@ export default function App() {
       <Cat name="Munkustrap" />
       <Cat name="Spot" />
       <FlatListBasics />
+      <SectionListBasics />
       
       <StatusBar style="auto" />
     </View>
