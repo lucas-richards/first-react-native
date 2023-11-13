@@ -38,6 +38,10 @@ export default function App() {
       <Cat name="Spot" />
       <FlatListBasics />
       <SectionListBasics />
+
+      <View style={{flex: 1, backgroundColor: 'powderblue'}} />
+      <View style={{flex: 2, backgroundColor: 'skyblue'}} />
+      <View style={{flex: 3, backgroundColor: 'steelblue'}} />
       
       <StatusBar style="auto" />
     </View>
